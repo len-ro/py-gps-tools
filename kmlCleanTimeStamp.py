@@ -2,6 +2,10 @@
 
 import libxml2, sys, re
 
+"""kmlCleanTimeStamp.py - removes TimeStamp information from .kml files. More precisely, it removes gx:TimeStamp and //kml:Placemark/kml:TimeStamp elements. Modifies the document in place. 
+Example - kmlCleanTimeStamp.py file.kml
+"""
+
 fileName = sys.argv[1]
 doc = libxml2.parseFile(fileName)
 ctxt = doc.xpathNewContext()
